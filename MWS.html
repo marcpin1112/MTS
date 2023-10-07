@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <style>
+      body {font-family: Arial;}
+      
+      /* Style the tab */
+      .tab {
+        overflow: hidden;
+        border: 1px solid #ff0000;
+        background-color: #c50505;
+      }
+      
+      /* Style the buttons inside the tab */
+      .tab button {
+        background-color: #000275;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+        color: rgb(255, 255, 255);
+      }
+      
+      /* Change background color of buttons on hover */
+      .tab button:hover {
+        background-color: rgb(158,0,0);
+      }
+      
+      /* Create an active/current tablink class */
+      .tab button.active {
+        background-color: #c00000;
+      }
+      
+      /* Style the tab content */
+      .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ff0000;
+        border-top: none;
+      }
+
+      h1 {
+  color: #00025c;
+  size: 100%;
+}
+
+p {
+  color: #5c0000;
+}
+     
+      </style>
+    <meta name="viewport" content="width=device-width, initial-scale=3.0">
+    <title>Marc's Web Page</title>
+</head>
+<body>
+
+      <!-- Tab links -->
+      <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Services that I provide')">Services</button>
+        <button class="tablinks" onclick="openCity(event, 'Social Media and Contact')">Social Media and Contact</button>
+      </div>
+      
+      <!-- Tab content -->
+      <div id="Services that I provide" class="tabcontent">
+        
+        <h3>Services that I provide</h3>
+        
+        <p>Services that I provide are:</p><br>
+        
+        <p>-Laptop/PC Troubleshoot and Repair</p><br>
+        
+        <p>-Gaming PC Builds</p><br>
+        
+        <p>-Phone Battery Replacements</p><br>
+        
+        <p>-Web and Graphic Design (including photoshop and coding)</p><br>
+      
+      </div>
+      
+      <div id="Social Media and Contact" class="tabcontent">
+        
+        <h3>Links to Social Media</h3>
+        
+        <a href="https://www.instagram.com/marcswebservices/">Link to Instagram</a><br>
+      
+      <p>You can contact me at (909)265-5116, or email me with the link below</p><br>
+      
+      <form action="mailto:someone@example.com" method="post" enctype="text/plain">
+        Name:<br>
+        <input type="text" name="name"><br>
+        E-mail:<br>
+        <input type="text" name="mail"><br>
+        Comment:<br>
+        <input type="text" name="comment" size="50"><br><br>
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+        </form>
+      
+      </div>
+      
+      <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+
+    <h1>Marc's Web Services</h1>
+
+    <p>Welcome to my web page where I will show you the services I provide. I am a student, web developer and designer, and I am also a computer technician.</p>
+
+     <img src="MTS.png" alt="Marc's Web Services"> 
+
+</body>
+</html>
